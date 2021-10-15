@@ -7,9 +7,9 @@
 
   <body>
       <h1>Payment Summary</h1>
-      <h2>Total Amount: <%= humanized_money_with_symbol Money.new(@order.checkout_amount_cents, "JPY").exchange_to(@order.payment_currency) %></h2>
+      <h2>合計: <%= humanized_money_with_symbol Money.new(@order.checkout_amount_cents, "JPY").exchange_to(@order.payment_currency) %></h2>
       <%unless @order.payment_currency == "jpy"%>
-        <p>Amount in Yen: <%= humanized_money_with_symbol(@order.checkout_amount_cents) %></p>
+        <p>円建て: <%= humanized_money_with_symbol(@order.checkout_amount_cents) %></p>
       <% end %>
         <%# <div class="row py-4">
           <div class="col">
@@ -24,7 +24,7 @@
               <div id="card-element">
                 <!-- Elements will create input elements here -->
               </div>
-              <button id="submit" class="btn btn-secondary mt-4">Pay</button> 
+              <button id="submit" class="btn btn-secondary mt-4">支払う</button> 
             </form>
           </div>
         </div>

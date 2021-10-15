@@ -5,11 +5,11 @@ Product.destroy_all
 Category.destroy_all
 
 puts 'Creating categories...'
-electronics = Category.create!(name: 'electronics')
+shoes = Category.create!(name: 'shoes')
 clothes = Category.create!(name: 'clothes')
 
 puts 'Creating products...'
-Product.create!(price: 500, sku: 'mouse', name: 'Computer Mouse', category: electronics, photo_url: 'https://images.pexels.com/photos/392018/pexels-photo-392018.jpeg?cs=srgb&dl=pexels-vojtech-okenka-392018.jpg&fm=jpg')
-Product.create!(price: 20000, sku: 'jeans', name: 'Jeans', category: clothes, photo_url: 'https://images.pexels.com/photos/1082529/pexels-photo-1082529.jpeg?cs=srgb&dl=pexels-mica-asato-1082529.jpg&fm=jpg')
-Product.create!(price: 4000, sku: 'headphone',   name: 'Headphone',      category: electronics, photo_url: 'https://images.pexels.com/photos/1591/technology-music-sound-things.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+Product.create!(price: 5000, sku: 'sweater', name: 'セーター', category: clothes, photo_url: 'https://images.pexels.com/photos/5464589/pexels-photo-5464589.jpeg?cs=srgb&dl=pexels-taryn-elliott-5464589.jpg&fm=jpg')
+Product.create!(price: 20000, sku: 'jeans', name: 'ジーンズ', category: clothes, photo_url: 'https://images.pexels.com/photos/1346187/pexels-photo-1346187.jpeg?cs=srgb&dl=pexels-godisable-jacob-1346187.jpg&fm=jpg')
+Product.create!(price: 12000, sku: 'sneaker',   name: 'スニーカー', category: shoes, photo_url: 'https://images.pexels.com/photos/3987290/pexels-photo-3987290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
 puts 'Finished!'

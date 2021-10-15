@@ -6,11 +6,11 @@
       <div class="col">
         <p>Purchase of <strong><%= products_order.product.name %></strong></p>
         <p><strong><%= humanized_money_with_symbol products_order.amount_cents %></strong></p>
-        <p>Quantity: <%= products_order.quantity %></strong></p>
+        <p>数量: <%= products_order.quantity %></strong></p>
       </div>
     </div>
   <% end %>
-  <h2>Total Amount: <%= humanized_money_with_symbol @order.checkout_amount_cents %></h2>
+  <h2>合計: <%= humanized_money_with_symbol @order.checkout_amount_cents %></h2>
   <button id="pay" class="btn btn-primary">Pay with Stripe Checkout</button>
   <div id="error-message"></div>
 

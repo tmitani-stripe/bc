@@ -6,11 +6,11 @@
       </div>
       <div class="col-sm-12 col-md-6">
         <h1><%= @product.name %></h1>
-        <p>Some description of product details.</p>
-        <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
+        <p>商品についての詳細説明</p>
+        <p>価格: <%= humanized_money_with_symbol(@product.price) %></p>
         <%= form_tag orders_path do %>
           <%= hidden_field_tag 'product_id', @product.id %>
-          <%= submit_tag 'Add to Cart', class: 'btn btn-secondary' %>
+          <%= submit_tag 'カートに入れる', class: 'btn btn-secondary' %>
         <% end %>
       </div>
     </div>

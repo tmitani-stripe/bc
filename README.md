@@ -50,5 +50,26 @@ NGROK_URL=<replace-with-your-ngrok-domain-name>
 
 10. Open localhost:3000 on your browser
 
+### Steps for Sytle Change
+
+1. Change logo in assests
+
+/assets/logo.png
+
+2. Change header color
+.navbar-lewagon {
+    background: ;
+
+3. Change $body-font: 
+Hiragino Kaku Gothic Pro,Meiryo,sans-serif;
+
+4. Change $body-bg: 
+
+5. Change button color
+.btn-primary, .btn-secondary, .btn-success{
+    background-color: #05a6de !important;
+}
+
+
 Author(s)
 @tmitani

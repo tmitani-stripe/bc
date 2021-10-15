@@ -1,17 +1,17 @@
 <div class="container">
   <% unless @order.nil? %>
     <h1>Order #<%= @order.id %> <small><span class="badge badge-success" id="status"><%= @order.state %></span></small></h1>
-    <h2 id="issue">ISSUED ON <%= @order.created_at.to_date %></h2>
-    <h2 id="charge-id">Charge ID <%= @order.charge_id %></h2>
-    <h2 id="total-amount">Total Ammount of <%= humanized_money_with_symbol(Money.new(@order.charged_amount_cents, @order.payment_currency)) %> </h2>
+    <h2 id="issue">日付 <%= @order.created_at.to_date %></h2>
+    <h2 id="charge-id">チャージ ID <%= @order.charge_id %></h2>
+    <h2 id="total-amount">合計額 <%= humanized_money_with_symbol(Money.new(@order.charged_amount_cents, @order.payment_currency)) %> </h2>
     <% @order.products_orders.each do |products_order| %>
       <div class="row py-4">
         <div class="col-md-3"><%= image_tag products_order.product.photo_url, width: '100%' %></div>
         <div class="col">
           <ul class="list-unstyled">
-            <li><strong>PRODUCT</strong> <%= products_order.product.name %> [<%= products_order.product_sku %>]</li>
-            <li><strong>PRICE</strong> <%= humanized_money_with_symbol products_order.amount %></li>
-            <li><strong>QUANTITY</strong> <%= products_order.quantity %></li>
+            <li><strong>プロダクト</strong> <%= products_order.product.name %> [<%= products_order.product_sku %>]</li>
+            <li><strong>合計</strong> <%= humanized_money_with_symbol products_order.amount %></li>
+            <li><strong>数量</strong> <%= products_order.quantity %></li>
           </ul>
         </div>
       </div>
